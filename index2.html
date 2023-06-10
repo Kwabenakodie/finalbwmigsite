@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://rawgit.com/jamietre/ImageMapster/master/dist/jquery.imagemapster.min.js"></script>
+
+<img id="myimage" class="map" src="http://cdn.iphoneincanada.ca/wp-content/uploads/2013/05/unnamed.png" usemap="#mark">
+    <map name="mark">
+        <area id="nao" shape="rect" coords="10,10,50,50" href="#">
+    </map>
+        
+
+    <script>
+
+$('#myimage').mapster({
+    staticState: true,
+    fillColor: "d42e16",
+    stroke: true,
+    strokeColor: "ff0000",
+    strokeOpacity: 1.0,
+    strokeWidth: 2,
+    render_highlight:  {
+        fillOpacity: 0.5,
+        fillColor: "FFeedd",
+        stroke: true,
+        strokeOpacity: 1.0,
+        strokeColor: "FF0000",
+        strokeWidth: 2
+    }
+});
+    </script>
+
+<style>
+    img{
+        width: 100%;
+    }
+</style>

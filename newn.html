@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="index.css">
+	<style>
+		.justifier {
+			text-align: justify;
+		}
+
+		img {
+			display: block;
+			margin: auto;
+		}
+
+		#hed1 {
+			text-align: center;
+			position: relative;
+		}
+
+		nav {
+			width: 100%;
+			background: gray;
+			overflow: auto;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0 0 0 150px;
+			list-style: none;
+		}
+
+		li {
+			float: left;
+		}
+
+		.logo img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		footer {
+			text-align: center;
+		}
+
+		.highlighted {
+			/* Apply the highlight style to the clicked area */
+			background-color: yellow;
+		}
+	</style>
+	<script>
+		// Add event listener to the image map
+		document.addEventListener('DOMContentLoaded', function () {
+			var areas = document.querySelectorAll('area');
+
+			// Handle the click event for each area
+			areas.forEach(function (area) {
+				area.addEventListener('click', function (event) {
+					// Remove the highlight class from all areas
+					areas.forEach(function (a) {
+						a.classList.remove('highlighted');
+					});
+
+					// Add the highlight class to the clicked area
+					event.target.classList.add('highlighted');
+				});
+			});
+		});
+	</script>
+</head>
+<body background="newbcg.jpg">
+	<h1 id="hed1">Migration Statistics for Baden Wurttemberg</h1>
+	<img src="newtouse.jpg" alt="BadenWurttemberg" usemap="#bw">
+	<map name="bw">
+		<area shape="rect" coords="207,55,446,210" href="Rheinneckar.html" alt="Rhein-Neckar">
+		<area shape="rect" coords="107,211,221,404" href="Mittioberrhein.html" alt="Mitti-Ober-Rhein">
+		<area shape="rect" coords="19,409,161,652" href="Sudlicheroberrhein.html" alt="Sudlicheroberrhein">
+		<area shape="rect" coords="5,670,347,755" href="Hochreinbodensee.html" alt="Hochreinbodensee">
+		<area shape="rect" coords="180,501,294,627" href="Schwarzwaldheuberg.html" alt="SchwarzwaldHeuberg">
+		<area shape="rect" coords="364,586,581,737" href="Bodenseeoberschwaben.html" alt="Bodenseeoberschwaben">
+		<area shape="rect" coords="457,431,581,571" href="Donauiller.html" alt="DonauIller">
+		<area shape="rect" coords="294,422,427,536" href="neckaralb
